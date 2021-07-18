@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
@@ -27,13 +27,17 @@ TODO: Add long description of the pod here.
   s.author           = { 'sugc' => '2528397406@qq.com' }
   s.source           = { :git => 'https://github.com/sugc/CommonUtil.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '14.1'
+  s.module_name             = 'CommonUtil'
+  s.ios.deployment_target =
+  '13.0'
   s.swift_version = '5.0'
   
-  s.pod_target_xcconfig = { "OTHER_SWIFT_FLAGS[config=Release]" => "$(inherited) -suppress-warnings"}
+#  s.use_modular_headers = 'true'
+  
+#  s.pod_target_xcconfig = { "OTHER_SWIFT_FLAGS[config=Release]" => "$(inherited) -suppress-warnings"}
 
   s.source_files = 'CommonUtil/Classes/**/*.swift'
+  
 
 
 end
